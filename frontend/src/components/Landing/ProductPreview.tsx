@@ -5,28 +5,28 @@ function ProductPreview() {
       <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
         <div className="flex items-center justify-between border-b border-gray-200 px-6 py-4">
           <a href="#" className="flex shrink-0 items-center gap-3">
-          <span className="relative flex h-10 w-10 -rotate-6 items-center justify-center rounded-xl bg-[#6753DB] text-white shadow-sm">
-            <svg
-              viewBox="0 0 40 40"
-              className="h-8 w-8 rotate-6"
-              fill="white"
-              aria-hidden="true"
-            >
-              <path
-                d="M20 5 L21.8 10.5 L26 12 L21.8 13.5 L20 19 L18.2 13.5 L14 12 L18.2 10.5 Z"
-                fill="none"
-                stroke="white"
-                strokeWidth="1.3"
-                strokeLinejoin="round"
-              />
-              <path d="M10 21 L11.5 25 L15 26.5 L11.5 28 L10 32 L8.5 28 L5 26.5 L8.5 25 Z" />
-              <path d="M28 21 L29.5 25 L33 26.5 L29.5 28 L28 32 L26.5 28 L23 26.5 L26.5 25 Z" />
-            </svg>
-          </span>
-          <span className="text-3xl font-bold leading-none tracking-tight text-[#19182A]">
-            Folio<span className="text-[#6753DB]">.</span>
-          </span>
-        </a>
+            <span className="relative flex h-10 w-10 -rotate-6 items-center justify-center rounded-xl bg-[#6753DB] text-white shadow-sm">
+              <svg
+                viewBox="0 0 40 40"
+                className="h-8 w-8 rotate-6"
+                fill="white"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 5 L21.8 10.5 L26 12 L21.8 13.5 L20 19 L18.2 13.5 L14 12 L18.2 10.5 Z"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1.3"
+                  strokeLinejoin="round"
+                />
+                <path d="M10 21 L11.5 25 L15 26.5 L11.5 28 L10 32 L8.5 28 L5 26.5 L8.5 25 Z" />
+                <path d="M28 21 L29.5 25 L33 26.5 L29.5 28 L28 32 L26.5 28 L23 26.5 L26.5 25 Z" />
+              </svg>
+            </span>
+            <span className="text-3xl font-bold leading-none tracking-tight text-[#19182A]">
+              Folio<span className="text-[#6753DB]">.</span>
+            </span>
+          </a>
           <span className="flex items-center gap-2 text-sm text-gray-500">
             <span className="h-2 w-2 rounded-full bg-[#459D4F]"></span>
             Saved
