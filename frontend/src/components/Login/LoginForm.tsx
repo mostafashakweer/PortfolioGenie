@@ -1,5 +1,6 @@
 import { useId, useRef, useState } from "react";
 import type { FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowRightIcon, GitHubIcon, SparklesIcon } from "../Landing/icons";
 
 export interface LoginFormProps {
@@ -11,7 +12,8 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validateEmail(value: string): string {
   if (!value.trim()) return "Please enter your email address.";
-  if (!EMAIL_PATTERN.test(value.trim())) return "Please enter a valid email address.";
+  if (!EMAIL_PATTERN.test(value.trim()))
+    return "Please enter a valid email address.";
   return "";
 }
 
@@ -24,6 +26,7 @@ export default function LoginForm({
   const inputRef = useRef<HTMLInputElement>(null);
   const inputId = useId();
   const errorId = useId();
+  const navigate = useNavigate();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,7 +37,9 @@ export default function LoginForm({
       inputRef.current?.focus();
       return;
     }
+
     onEmailSubmit?.(email.trim());
+    navigate("/home");
   };
 
   return (
@@ -47,8 +52,7 @@ export default function LoginForm({
         Don&apos;t have an account?{" "}
         <a
           href="#signup"
-          className="text-folio-purple hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-folio-purple"
-        >
+          className="text-folio-purple hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-folio-purple">
           Sign UP
         </a>
       </p>
@@ -64,8 +68,7 @@ export default function LoginForm({
       <button
         type="button"
         onClick={onGithubLogin}
-        className="mt-6 flex h-[59px] w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-folio-ink text-[0.9375rem] font-medium text-white transition hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-folio-ink"
-      >
+        className="mt-6 flex h-[59px] w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-folio-ink text-[0.9375rem] font-medium text-white transition hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-folio-ink">
         <GitHubIcon className="size-6" />
         Continue with GitHub
       </button>
@@ -79,8 +82,7 @@ export default function LoginForm({
       <form onSubmit={handleSubmit} noValidate className="text-left">
         <label
           htmlFor={inputId}
-          className="mb-4 block pl-2 text-[0.9375rem] font-medium text-folio-ink"
-        >
+          className="mb-4 block pl-2 text-[0.9375rem] font-medium text-folio-ink">
           Email address
         </label>
 
@@ -103,15 +105,13 @@ export default function LoginForm({
         <p
           id={errorId}
           role="alert"
-          className="mt-2 min-h-5 pl-2 text-sm text-red-600"
-        >
+          className="mt-2 min-h-5 pl-2 text-sm text-red-600">
           {error}
         </p>
 
         <button
           type="submit"
-          className="mt-2 flex h-[59px] w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-folio-purple text-[0.9375rem] font-medium text-white transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-folio-purple"
-        >
+          className="mt-2 flex h-[59px] w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-folio-purple text-[0.9375rem] font-medium text-white transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-folio-purple">
           Continue with email
           <ArrowRightIcon className="size-[18px]" />
         </button>
