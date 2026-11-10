@@ -53,7 +53,13 @@ function Navbar() {
           >
             Log in
           </Link>
-
+          <Link
+            to='/register'
+            onClick={() => setIsMenuOpen(false)}
+            className='mt-1 rounded-lg border border-[#1F1D32] px-4 py-3 text-center text-sm font-medium text-[#1F1D32] transition hover:bg-violet-50'
+          >
+            Sign up
+          </Link>
           <button className='flex items-center gap-2 whitespace-nowrap rounded-lg bg-[#1F1D32] px-3 py-2.5 text-xs font-medium text-white transition hover:bg-violet-700 sm:px-4'>
             Build your portfolio
             <span>→</span>
@@ -90,7 +96,12 @@ function Navbar() {
             >
               Log in
             </Link>
-
+            <Link
+              to='/register'
+              className='whitespace-nowrap rounded-lg border border-[#1F1D32] px-3 py-2.5 text-xs font-medium text-[#1F1D32] transition hover:bg-violet-50 sm:px-4'
+            >
+              Sign up
+            </Link>
             <button className='mt-1 flex items-center justify-center gap-2 rounded-lg bg-[#1F1D32] px-4 py-3 text-sm font-medium text-white transition hover:bg-violet-700'>
               Build your portfolio →
             </button>
