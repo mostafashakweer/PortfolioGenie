@@ -60,10 +60,13 @@ function Navbar() {
           >
             Sign up
           </Link>
-          <button className='flex items-center gap-2 whitespace-nowrap rounded-lg bg-[#1F1D32] px-3 py-2.5 text-xs font-medium text-white transition hover:bg-violet-700 sm:px-4'>
+          <Link
+            to='/my-portfolio'
+            className='flex items-center gap-2 whitespace-nowrap rounded-lg bg-[#1F1D32] px-3 py-2.5 text-xs font-medium text-white transition hover:bg-violet-700 sm:px-4'
+          >
             Build your portfolio
             <span>→</span>
-          </button>
+          </Link>
         </div>
         <button
           type='button'
@@ -102,9 +105,13 @@ function Navbar() {
             >
               Sign up
             </Link>
-            <button className='mt-1 flex items-center justify-center gap-2 rounded-lg bg-[#1F1D32] px-4 py-3 text-sm font-medium text-white transition hover:bg-violet-700'>
+            <Link
+              to='/my-portfolio'
+              onClick={() => setIsMenuOpen(false)}
+              className='mt-1 flex items-center justify-center gap-2 rounded-lg bg-[#1F1D32] px-4 py-3 text-sm font-medium text-white transition hover:bg-violet-700'
+            >
               Build your portfolio →
-            </button>
+            </Link>
           </div>
         </div>
       )}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <section className="relative min-h-[800px] overflow-hidden bg-white px-5 py-20 sm:px-8 lg:px-10">
@@ -43,12 +45,12 @@ function Hero() {
         </p>
         <div className="mt-8 flex flex-wrap items-start justify-center gap-4">
           <div className="flex flex-col items-end gap-4">
-            <a
-              href="#build"
+            <Link
+              to="/my-portfolio"
               className="rounded-xl bg-[#6753DB] px-6 py-4 font-semibold text-white transition hover:bg-[#11101D]"
             >
               Build my portfolio →
-            </a>
+            </Link>
             <div className="flex flex-col items-start gap-3">
               <div className="flex gap-1 text-[#8A7DDD]" aria-hidden="true">
                 {[1, 2, 3, 4, 5].map((star) => (

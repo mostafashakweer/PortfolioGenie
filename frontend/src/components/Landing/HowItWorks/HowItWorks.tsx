@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import Button from "../../ui/Button";
+import { Link } from "react-router-dom";
 import StepItem from "./StepItem";
 import { steps } from "../HowItWorks/steps";
 
@@ -22,9 +22,12 @@ export default function HowItWorks() {
             portfolio” to “Here’s my portfolio” before your coffee gets cold.
           </p>
 
-          <Button className="mt-8">
+          <Link
+            to="/my-portfolio"
+            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#241B45] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#32275F]"
+          >
             Start building for free <ArrowRight size={16} />
-          </Button>
+          </Link>
         </div>
 
         <ol>
