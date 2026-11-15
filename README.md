@@ -21,7 +21,8 @@ Our goal is to help junior developers present their work effectively and build a
 
 ## 🛠️ Technologies
 
-- **Frontend:** React.js, TypeScript, Vite
+- **Frontend:** React.js, TypeScript, Vite (deployed separately on Vercel)
+- **Backend:** Node.js HTTP API (`backend/node`)
 - **Routing:** React Router
 - **Code Quality:** ESLint
 - **Version Control:** Git & GitHub
@@ -51,33 +52,27 @@ Project documentation, design resources, and implementation details will be adde
 - npm
 - Git
 
-### Installation
+### Frontend
 
-1. Clone the repository:
+The Vercel frontend project continues to use `frontend/` as its project root.
 
-   ```bash
-   git clone YOUR_REPOSITORY_URL
-   ```
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-2. Navigate to the frontend directory:
+### Backend
 
-   ```bash
-   cd PortfolioGenie/frontend
-   ```
+In a separate terminal, start the API:
 
-3. Install dependencies:
+```bash
+cd backend/node
+npm install
+npm start
+```
 
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the local URL displayed in your terminal.
+The initial API provides `GET /api/health`. Run its tests with `npm test` from `backend/node`. Deploy the API as a separate Node.js service; see [`backend/node/README.md`](backend/node/README.md) for runtime and CORS configuration. No application data or AI endpoints have been wired to the backend yet.
 
 ## 🤝 Contributing
 
